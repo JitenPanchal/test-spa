@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KPMG.Test.Core</RootNamespace>
+    <AssemblyName>KPMG.Test.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\ReleaseInformation.cs" />
+    <Compile Include="Constants\UserFeedbackMessages.cs" />
+    <Compile Include="Constants\ValidationContextKeys.cs" />
+    <Compile Include="Database\Attributes\DbMigrationVersionAttribute.cs" />
+    <Compile Include="Database\BaseDbContext.cs" />
+    <Compile Include="Database\BaseEntity.cs" />
+    <Compile Include="Database\DbContext.cs" />
+    <Compile Include="Database\Entities\Article.cs" />
+    <Compile Include="Database\Entities\Article.Partial.cs" />
+    <Compile Include="Database\Entities\ArticleFeedback.cs" />
+    <Compile Include="Database\Entities\User.cs" />
+    <Compile Include="Database\IDbContext.cs" />
+    <Compile Include="Database\IPagedList.cs" />
+    <Compile Include="Database\Mappings\ArticleConfiguration.cs" />
+    <Compile Include="Database\Mappings\ArticleFeedbackConfiguration.cs" />
+    <Compile Include="Database\Mappings\UserConfiguration.cs" />
+    <Compile Include="Database\Migration\DbMigration1000.cs" />
+    <Compile Include="Database\Migration\KPMGDbMigrationConfiguration.cs" />
+    <Compile Include="Database\PagedList.cs" />
+    <Compile Include="Database\Validations\Article.cs" />
+    <Compile Include="Enums\ArticlesSortBy.cs" />
+    <Compile Include="Enums\ArticleStatus.cs" />
+    <Compile Include="Enums\PermissionType.cs" />
+    <Compile Include="Enums\UserType.cs" />
+    <Compile Include="Exceptions\EntityNotFoundException.cs" />
+    <Compile Include="Extensions\DbEntityValidationExceptionExtensions.cs" />
+    <Compile Include="Models\ResponseModel\ArticleStatResponse.cs" />
+    <Compile Include="Models\ResponseModel\ArticleMostLiked.cs" />
+    <Compile Include="Models\ResponseModel\LoginResponse.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\KPMG.Test.Core.dll.config" />
+    <None Include="bin\Release\KPMG.Test.Core.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\KPMG.Test.Core.csproj.CopyComplete" />
+    <None Include="obj\Debug\KPMG.Test.Core.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\KPMG.Test.Core.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\KPMG.Test.Core.csproj.CopyComplete" />
+    <None Include="obj\Release\KPMG.Test.Core.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\KPMG.Test.Core.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\KPMG.Test.Core.dll" />
+    <Content Include="bin\Debug\KPMG.Test.Core.pdb" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\EntityFramework.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Release\EntityFramework.xml" />
+    <Content Include="bin\Release\KPMG.Test.Core.dll" />
+    <Content Include="bin\Release\KPMG.Test.Core.pdb" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="obj\Debug\KPMG.Test.Core.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\KPMG.Test.Core.dll" />
+    <Content Include="obj\Debug\KPMG.Test.Core.pdb" />
+    <Content Include="obj\Release\KPMG.Test.Core.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\KPMG.Test.Core.dll" />
+    <Content Include="obj\Release\KPMG.Test.Core.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

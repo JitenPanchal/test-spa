@@ -1,0 +1,49 @@
+<div class="container-fluid p-3">
+  <form #articleForm="ngForm">
+    <div class="row">
+      <div class="col-sm-6 col-md-6">
+        <h2 class="d-inline">Edit Article</h2>
+        <a class="back-link ml-3" [routerLink]='["", "articles" ]'>
+          <i class="fa fa-arrow-circle-left mr-1"></i>back to articles</a>
+      </div>
+      <div class="col-sm-6 col-md-6 text-right">
+        <div class="form-group">
+          <button type="button" class="btn btn-primary" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Save"
+            (click)="onSaveClick($event, false)" [disabled]="!articleForm.valid">
+            <i class="fa fa-save mr-2"></i>Save</button>
+          <button type="button" class="btn btn-primary" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Save &amp; new"
+            (click)="onSaveClick($event, true)" [disabled]="!articleForm.valid">
+            <i class="fa fa-save mr-2"></i>Save &amp; new</button>
+        </div>
+      </div>
+    </div>
+    <div class="bg-white p-4 mt-2">
+      <div class="form-group row">
+        <label for="txtTitle" class="col-sm-2 col-form-label">Title</label>
+        <div class="col-sm-10">
+          <input name="title" type="text" maxlength="255" #title="ngModel" [(ngModel)]="article.title" class="form-control"
+            placeholder="Title" required autocomplete="off">
+          <p class="invalid-label" *ngIf="!title.valid && title.touched">Title is required</p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="txtBody" class="col-sm-2 col-form-label">Body</label>
+        <div class="col-sm-10">
+          <textarea name="body" #body="ngModel" maxlength="50000" [(ngModel)]="article.body" rows="12" class="form-control"
+            id="txtBody" placeholder="Body" required></textarea>
+          <p class="invalid-label" *ngIf="!body.valid && body.touched">Body is required</p>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="inputPassword3" class="col-sm-2 col-form-label">Publish</label>
+        <div class="col-sm-10">
+          <div class="form-check">
+            <input class="form-check-input position-static" name="chkPublish" [(ngModel)]="article.isPublished" type="checkbox"
+              id="chkPublish">
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </form>
+</div>

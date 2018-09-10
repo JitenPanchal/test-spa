@@ -1,0 +1,76 @@
+<div class="container-fluid p-3">
+  <div class="row">
+    <div class="col-sm-10 col-md-10">
+      <h2 class="d-inline">Latest Articles</h2>
+    </div>
+    <div class="col-sm-2 col-md-2 text-right">
+      <div class="form-group">
+        <select class="form-control" (change)="onSortByChange($event)" id="exampleFormControlSelect1">
+          <option value="0">Most Liked</option>
+          <option value="1">Most Recent</option>
+        </select>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-white p-4 mt-2 mb-3">
+    <h6 class="text-right">
+      {{this.articles.paginationText}}</h6>
+    <div class="card-deck mb-2" *ngFor="let article of (this.articles.items ? this.articles.items : []); let i of index;">
+      <div class="card">
+        <div class="card-header">
+          <div class="row">
+            <div class="col-sm-8 col-md-8">
+              <p class="d-inline text-left">Author: {{article.author}}</p>
+            </div>
+            <div class="col-sm-4 col-md-4 text-right">
+
+              <button type="button" class="btn btn-primary align-top w-25">
+                <i class="fas fa-thumbs-up mr-1"></i>
+                <span class="badge badge-light">{{this.article.likeCount || 0}}</span>
+              </button>
+              <button type="button" class="btn btn-primary align-top w-25">
+                <i class="fas fa-thumbs-down mr-1"></i>
+                <span class="badge badge-light">{{this.article.unLikeCount || 0}}</span>
+              </button>
+
+            </div>
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><a class="nav-link" [routerLink]='["", "view", article.id]'>{{
+              article.title }}</a></h5>
+        </div>
+        <div class="card-footer">
+          <p class="d-inline text-right">Published On: {{ article.publishDate | date:'medium' }}</p>
+        </div>
+      </div>
+    </div>
+    <nav *ngIf="this.articles && this.articles.items.length" aria-label="Page navigation example mt-2">
+      <ul class="pagination justify-content-center">
+        <li class="page-item">
+          <button class="page-link" (click)="onGoToPageButtonClick(1)">
+            <i class="fas fa-fast-backward"></i>
+          </button>
+        </li>
+        <li class="page-item" [ngClass]="{disabled: this.articles && !this.articles.hasPreviousPage}">
+          <button class="page-link" (click)="onPreviousButtonClick(this.articles.pageNumber)">
+            <i class="fas fa-step-backward"></i>
+          </button>
+        </li>
+        <li class="page-item">
+          <button class="page-link">{{this.articles.pageNumber}}</button>
+        </li>
+        <li class="page-item" [ngClass]="{disabled: this.articles && !this.articles.hasNextPage}">
+          <button class="page-link" (click)="onNextButtonClick(this.articles.pageNumber)">
+            <i class="fas fa-step-forward"></i>
+          </button>
+        </li>
+        <li class="page-item">
+          <button class="page-link" (click)="onGoToPageButtonClick(this.articles.totalPages)">
+            <i class="fas fa-fast-forward"></i>
+          </button>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</div>

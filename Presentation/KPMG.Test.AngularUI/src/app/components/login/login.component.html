@@ -1,0 +1,37 @@
+<div class="back">
+  <div class="div-center">
+    <div class="content">
+      <div class="container">
+        <h3 class="text-center">
+          <i class="far fa-user mr-2"></i>Login</h3>
+        <hr />
+        <form #loginForm="ngForm" autocomplete="off">
+          <div class="form-group">
+            <label for="inputUserName">Username</label>
+            <input list="usernames" name="username" type="text" #username="ngModel" [(ngModel)]="loginRequestModel.username"
+              class="form-control" placeholder="username" required autocomplete="off">
+            <p class="invalid-label" *ngIf="!username.valid && username.touched">Username is required</p>
+            <datalist id="usernames">
+              <option value="employee_">
+              <option value="publisher_">
+            </datalist>
+          </div>
+          <div class="form-group">
+            <label for="inputPassword">Password</label>
+            <input name="password" type="password" #password="ngModel" (keypress)="onTextBoxKeyPress($event)"
+              [(ngModel)]="loginRequestModel.password" password="password" required class="form-control" placeholder="password"
+              autocomplete="off" />
+            <p class="invalid-label" *ngIf="!password.valid && password.touched">Password is required</p>
+          </div>
+          <div class="form-group">
+            <button type="button" (click)="onSubmit($event)" [disabled]="!loginForm.valid" data-loading-text="<i class='fa fa-spinner fa-spin '></i> Login"
+              class="btn btn-primary">Login</button>
+            <button type="button" name="resetButton" class="btn btn-link">Reset Password</button>
+          </div>
+          <p *ngIf="!loginResponseModel.isSuccess" class="invalid-label text-center font-weight-bold">{{loginResponseModel.message}}</p>
+          <hr />
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

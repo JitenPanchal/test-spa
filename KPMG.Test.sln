@@ -1,0 +1,109 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27428.2043
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{BB55BB47-3E51-424B-AE4E-40A2286FF51F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Test.Core", "Libraries\KPMG.Test.Core\KPMG.Test.Core.csproj", "{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Test.Services", "Libraries\KPMG.Test.Services\KPMG.Test.Services.csproj", "{1BA74BD3-0984-469A-8AFD-BE84502EADE9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{4670C292-02A9-4041-98EE-0D943C8D0911}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Test.Web", "Presentation\KPMG.Test.Web\KPMG.Test.Web.csproj", "{4DDE7D66-214D-4BD1-9AB9-26348CBA8559}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{3F1426E8-7A10-4FFB-BB26-E01D73D67210}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Test.ApiIntegrationTests", "Tests\KPMG.Test.ApiIntegrationTests\KPMG.Test.ApiIntegrationTests.csproj", "{AF4630DD-F6A2-4973-869A-E6E1DFAE9006}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Test.IntegrationTests", "Tests\KPMG.Test.IntegrationTests\KPMG.Test.IntegrationTests.csproj", "{D42A06A1-626F-4088-A4FA-558CD2CAF012}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KPMG.Test.UnitTests", "Tests\KPMG.Test.UnitTests\KPMG.Test.UnitTests.csproj", "{E84B113E-7F23-45D8-B22F-FEDBE24E3EBC}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "KPMG.Test.AngularUI", "Presentation\KPMG.Test.AngularUI\", "{970A5032-7782-4202-A45F-E85B85095792}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5.2"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_63816"
+		Debug.AspNetCompiler.PhysicalPath = "Presentation\KPMG.Test.AngularUI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63816\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_63816"
+		Release.AspNetCompiler.PhysicalPath = "Presentation\KPMG.Test.AngularUI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_63816\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "63816"
+		SlnRelativePath = "Presentation\KPMG.Test.AngularUI\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Others", "Others", "{11FB2F3E-D0BF-4DF1-893B-4908548DE07A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Scripts", "Scripts", "{768F3BEE-3D41-420C-B5C2-4FBFFD1118D3}"
+	ProjectSection(SolutionItems) = preProject
+		Others\Scripts\Script.sql = Others\Scripts\Script.sql
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Setup Documents", "Setup Documents", "{460C2618-3097-4B37-8A06-0FE08A072B35}"
+	ProjectSection(SolutionItems) = preProject
+		Others\Setup Documents\IIS Virtual directory setup.docx = Others\Setup Documents\IIS Virtual directory setup.docx
+		Others\Setup Documents\ReadMe.docx = Others\Setup Documents\ReadMe.docx
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1BA74BD3-0984-469A-8AFD-BE84502EADE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BA74BD3-0984-469A-8AFD-BE84502EADE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BA74BD3-0984-469A-8AFD-BE84502EADE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BA74BD3-0984-469A-8AFD-BE84502EADE9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DDE7D66-214D-4BD1-9AB9-26348CBA8559}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DDE7D66-214D-4BD1-9AB9-26348CBA8559}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DDE7D66-214D-4BD1-9AB9-26348CBA8559}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DDE7D66-214D-4BD1-9AB9-26348CBA8559}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF4630DD-F6A2-4973-869A-E6E1DFAE9006}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF4630DD-F6A2-4973-869A-E6E1DFAE9006}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF4630DD-F6A2-4973-869A-E6E1DFAE9006}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF4630DD-F6A2-4973-869A-E6E1DFAE9006}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D42A06A1-626F-4088-A4FA-558CD2CAF012}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D42A06A1-626F-4088-A4FA-558CD2CAF012}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D42A06A1-626F-4088-A4FA-558CD2CAF012}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D42A06A1-626F-4088-A4FA-558CD2CAF012}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E84B113E-7F23-45D8-B22F-FEDBE24E3EBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E84B113E-7F23-45D8-B22F-FEDBE24E3EBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E84B113E-7F23-45D8-B22F-FEDBE24E3EBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E84B113E-7F23-45D8-B22F-FEDBE24E3EBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{970A5032-7782-4202-A45F-E85B85095792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{970A5032-7782-4202-A45F-E85B85095792}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC} = {BB55BB47-3E51-424B-AE4E-40A2286FF51F}
+		{1BA74BD3-0984-469A-8AFD-BE84502EADE9} = {BB55BB47-3E51-424B-AE4E-40A2286FF51F}
+		{4DDE7D66-214D-4BD1-9AB9-26348CBA8559} = {4670C292-02A9-4041-98EE-0D943C8D0911}
+		{AF4630DD-F6A2-4973-869A-E6E1DFAE9006} = {3F1426E8-7A10-4FFB-BB26-E01D73D67210}
+		{D42A06A1-626F-4088-A4FA-558CD2CAF012} = {3F1426E8-7A10-4FFB-BB26-E01D73D67210}
+		{E84B113E-7F23-45D8-B22F-FEDBE24E3EBC} = {3F1426E8-7A10-4FFB-BB26-E01D73D67210}
+		{970A5032-7782-4202-A45F-E85B85095792} = {4670C292-02A9-4041-98EE-0D943C8D0911}
+		{768F3BEE-3D41-420C-B5C2-4FBFFD1118D3} = {11FB2F3E-D0BF-4DF1-893B-4908548DE07A}
+		{460C2618-3097-4B37-8A06-0FE08A072B35} = {11FB2F3E-D0BF-4DF1-893B-4908548DE07A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FB2474BD-CA20-417A-B7FB-3875E770828F}
+	EndGlobalSection
+EndGlobal

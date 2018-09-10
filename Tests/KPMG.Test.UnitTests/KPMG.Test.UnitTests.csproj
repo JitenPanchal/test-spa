@@ -1,0 +1,319 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E84B113E-7F23-45D8-B22F-FEDBE24E3EBC}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>KPMG.Test.UnitTests</RootNamespace>
+    <AssemblyName>KPMG.Test.UnitTests</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+    <ReferencePath>$(ProgramFiles)\Common Files\microsoft shared\VSTT\$(VisualStudioVersion)\UITestExtensionPackages</ReferencePath>
+    <IsCodedUITest>False</IsCodedUITest>
+    <TestProjectType>UnitTest</TestProjectType>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=7.0.1.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\AutoMapper.7.0.1\lib\net45\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core, Version=4.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Castle.Core.4.3.1\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Moq, Version=4.9.0.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Moq.4.9.0\lib\net45\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.6\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.1.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.Threading.Tasks.Extensions.4.3.0\lib\portable-net45+win8+wp8+wpa81\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\System.ValueTuple.4.5.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.Cors.5.2.6\lib\net45\System.Web.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.6\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.Cors, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Cors.5.2.6\lib\net45\System.Web.Http.Cors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.SelfHost, Version=5.2.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.SelfHost.5.2.6\lib\net45\System.Web.Http.SelfHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <Choose>
+    <When Condition="('$(VisualStudioVersion)' == '10.0' or '$(VisualStudioVersion)' == '') and '$(TargetFrameworkVersion)' == 'v3.5'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+      </ItemGroup>
+    </When>
+    <Otherwise>
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+      </ItemGroup>
+    </Otherwise>
+  </Choose>
+  <ItemGroup>
+    <Compile Include="ApiControllers\ArticleControllerTests.cs" />
+    <Compile Include="BaseUnitTest.cs" />
+    <Compile Include="Fakes\DbAsyncEnumerable.cs" />
+    <Compile Include="Fakes\DbAsyncEnumerator.cs" />
+    <Compile Include="Fakes\DbAsyncQueryProvider.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
+    <Compile Include="obj\Release\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ArticleServiceTests.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Libraries\KPMG.Test.Core\KPMG.Test.Core.csproj">
+      <Project>{E4D4CF4D-40AA-4B05-9434-7B42EEF8E6DC}</Project>
+      <Name>KPMG.Test.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Libraries\KPMG.Test.Services\KPMG.Test.Services.csproj">
+      <Project>{1ba74bd3-0984-469a-8afd-be84502eade9}</Project>
+      <Name>KPMG.Test.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Presentation\KPMG.Test.Web\KPMG.Test.Web.csproj">
+      <Project>{4dde7d66-214d-4bd1-9ab9-26348cba8559}</Project>
+      <Name>KPMG.Test.Web</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="bin\Debug\KPMG.Test.Core.dll.config" />
+    <None Include="bin\Debug\KPMG.Test.CoreTests.dll.config" />
+    <None Include="bin\Debug\KPMG.Test.Services.dll.config" />
+    <None Include="bin\Debug\KPMG.Test.UnitTests.dll.config" />
+    <None Include="bin\Debug\KPMG.Test.Web.dll.config" />
+    <None Include="bin\Release\KPMG.Test.Core.dll.config" />
+    <None Include="bin\Release\KPMG.Test.Services.dll.config" />
+    <None Include="bin\Release\KPMG.Test.UnitTests.dll.config" />
+    <None Include="bin\Release\KPMG.Test.Web.dll.config" />
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\KPMG.Test.CoreTests.csproj.CopyComplete" />
+    <None Include="obj\Debug\KPMG.Test.CoreTests.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\KPMG.Test.CoreTests.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\KPMG.Test.Tests.csproj.CopyComplete" />
+    <None Include="obj\Debug\KPMG.Test.Tests.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\KPMG.Test.Tests.csprojAssemblyReference.cache" />
+    <None Include="obj\Debug\KPMG.Test.UnitTests.csproj.CopyComplete" />
+    <None Include="obj\Debug\KPMG.Test.UnitTests.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Debug\KPMG.Test.UnitTests.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\KPMG.Test.CoreTests.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\KPMG.Test.Tests.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\KPMG.Test.Tests.csprojAssemblyReference.cache" />
+    <None Include="obj\Release\KPMG.Test.UnitTests.csproj.CopyComplete" />
+    <None Include="obj\Release\KPMG.Test.UnitTests.csproj.CoreCompileInputs.cache" />
+    <None Include="obj\Release\KPMG.Test.UnitTests.csprojAssemblyReference.cache" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\Autofac.dll" />
+    <Content Include="bin\Debug\Autofac.Integration.WebApi.dll" />
+    <Content Include="bin\Debug\Autofac.Integration.WebApi.pdb" />
+    <Content Include="bin\Debug\Autofac.Integration.WebApi.xml" />
+    <Content Include="bin\Debug\Autofac.xml" />
+    <Content Include="bin\Debug\AutoMapper.dll" />
+    <Content Include="bin\Debug\AutoMapper.pdb" />
+    <Content Include="bin\Debug\AutoMapper.xml" />
+    <Content Include="bin\Debug\Castle.Core.dll" />
+    <Content Include="bin\Debug\Castle.Core.xml" />
+    <Content Include="bin\Debug\EntityFramework.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Debug\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Debug\EntityFramework.xml" />
+    <Content Include="bin\Debug\KPMG.Test.Core.dll" />
+    <Content Include="bin\Debug\KPMG.Test.Core.pdb" />
+    <Content Include="bin\Debug\KPMG.Test.CoreTests.dll" />
+    <Content Include="bin\Debug\KPMG.Test.CoreTests.pdb" />
+    <Content Include="bin\Debug\KPMG.Test.Services.dll" />
+    <Content Include="bin\Debug\KPMG.Test.Services.pdb" />
+    <Content Include="bin\Debug\KPMG.Test.UnitTests.dll" />
+    <Content Include="bin\Debug\KPMG.Test.UnitTests.pdb" />
+    <Content Include="bin\Debug\KPMG.Test.Web.dll" />
+    <Content Include="bin\Debug\KPMG.Test.Web.pdb" />
+    <Content Include="bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" />
+    <Content Include="bin\Debug\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Debug\Moq.dll" />
+    <Content Include="bin\Debug\Moq.pdb" />
+    <Content Include="bin\Debug\Moq.xml" />
+    <Content Include="bin\Debug\Newtonsoft.Json.dll" />
+    <Content Include="bin\Debug\Newtonsoft.Json.xml" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\Debug\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Debug\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Debug\System.ValueTuple.dll" />
+    <Content Include="bin\Debug\System.ValueTuple.xml" />
+    <Content Include="bin\Debug\System.Web.Cors.dll" />
+    <Content Include="bin\Debug\System.Web.Http.Cors.dll" />
+    <Content Include="bin\Debug\System.Web.Http.Cors.xml" />
+    <Content Include="bin\Debug\System.Web.Http.dll" />
+    <Content Include="bin\Debug\System.Web.Http.SelfHost.dll" />
+    <Content Include="bin\Debug\System.Web.Http.SelfHost.xml" />
+    <Content Include="bin\Debug\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\Debug\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\Debug\System.Web.Http.xml" />
+    <Content Include="bin\Debug\System.Web.Mvc.dll" />
+    <Content Include="bin\Debug\System.Web.Mvc.xml" />
+    <Content Include="bin\Debug\System.Web.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\Debug\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\Debug\System.Web.WebPages.xml" />
+    <Content Include="bin\Release\Autofac.dll" />
+    <Content Include="bin\Release\Autofac.Integration.WebApi.dll" />
+    <Content Include="bin\Release\Autofac.Integration.WebApi.pdb" />
+    <Content Include="bin\Release\Autofac.Integration.WebApi.xml" />
+    <Content Include="bin\Release\Autofac.xml" />
+    <Content Include="bin\Release\AutoMapper.dll" />
+    <Content Include="bin\Release\AutoMapper.pdb" />
+    <Content Include="bin\Release\AutoMapper.xml" />
+    <Content Include="bin\Release\Castle.Core.dll" />
+    <Content Include="bin\Release\Castle.Core.xml" />
+    <Content Include="bin\Release\EntityFramework.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.dll" />
+    <Content Include="bin\Release\EntityFramework.SqlServer.xml" />
+    <Content Include="bin\Release\EntityFramework.xml" />
+    <Content Include="bin\Release\KPMG.Test.Core.dll" />
+    <Content Include="bin\Release\KPMG.Test.Core.pdb" />
+    <Content Include="bin\Release\KPMG.Test.Services.dll" />
+    <Content Include="bin\Release\KPMG.Test.Services.pdb" />
+    <Content Include="bin\Release\KPMG.Test.UnitTests.dll" />
+    <Content Include="bin\Release\KPMG.Test.UnitTests.pdb" />
+    <Content Include="bin\Release\KPMG.Test.Web.dll" />
+    <Content Include="bin\Release\KPMG.Test.Web.pdb" />
+    <Content Include="bin\Release\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll" />
+    <Content Include="bin\Release\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Release\Moq.dll" />
+    <Content Include="bin\Release\Moq.pdb" />
+    <Content Include="bin\Release\Moq.xml" />
+    <Content Include="bin\Release\Newtonsoft.Json.dll" />
+    <Content Include="bin\Release\Newtonsoft.Json.xml" />
+    <Content Include="bin\Release\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\Release\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\Release\System.Threading.Tasks.Extensions.dll" />
+    <Content Include="bin\Release\System.Threading.Tasks.Extensions.xml" />
+    <Content Include="bin\Release\System.ValueTuple.dll" />
+    <Content Include="bin\Release\System.ValueTuple.xml" />
+    <Content Include="bin\Release\System.Web.Cors.dll" />
+    <Content Include="bin\Release\System.Web.Http.Cors.dll" />
+    <Content Include="bin\Release\System.Web.Http.Cors.xml" />
+    <Content Include="bin\Release\System.Web.Http.dll" />
+    <Content Include="bin\Release\System.Web.Http.SelfHost.dll" />
+    <Content Include="bin\Release\System.Web.Http.SelfHost.xml" />
+    <Content Include="bin\Release\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\Release\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\Release\System.Web.Http.xml" />
+    <Content Include="bin\Release\System.Web.Mvc.dll" />
+    <Content Include="bin\Release\System.Web.Mvc.xml" />
+    <Content Include="bin\Release\System.Web.Optimization.dll" />
+    <Content Include="bin\Release\System.Web.Optimization.xml" />
+    <Content Include="bin\Release\System.Web.Razor.dll" />
+    <Content Include="bin\Release\System.Web.Razor.xml" />
+    <Content Include="bin\Release\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\Release\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\Release\System.Web.WebPages.dll" />
+    <Content Include="bin\Release\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\Release\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\Release\System.Web.WebPages.xml" />
+    <Content Include="obj\Debug\KPMG.Test.CoreTests.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\KPMG.Test.CoreTests.dll" />
+    <Content Include="obj\Debug\KPMG.Test.CoreTests.pdb" />
+    <Content Include="obj\Debug\KPMG.Test.Tests.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\KPMG.Test.UnitTests.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\KPMG.Test.UnitTests.dll" />
+    <Content Include="obj\Debug\KPMG.Test.UnitTests.pdb" />
+    <Content Include="obj\Release\KPMG.Test.UnitTests.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Release\KPMG.Test.UnitTests.dll" />
+    <Content Include="obj\Release\KPMG.Test.UnitTests.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Choose>
+    <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
+      <ItemGroup>
+        <Reference Include="Microsoft.VisualStudio.QualityTools.CodedUITestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Common, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITest.Extension, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+        <Reference Include="Microsoft.VisualStudio.TestTools.UITesting, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+          <Private>False</Private>
+        </Reference>
+      </ItemGroup>
+    </When>
+  </Choose>
+  <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,105 @@
+<div class="container-fluid p-3">
+  <div class="row">
+    <div class="col-sm-6 col-md-6">
+      <h2 class="d-inline">My Articles</h2>
+    </div>
+    <div class="col-sm-6 col-md-6 text-right">
+      <div class="form-group">
+        <select class="form-control d-inline w-25" (change)="onSortByChange($event)" id="exampleFormControlSelect1">
+          <option value="0">Most Liked</option>
+          <option value="1">Most Recent</option>
+        </select>
+        <button type="button" class="btn btn-primary" (click)="onAddClick($event)">
+          <i class="fa fa-plus-square  mr-2"></i>Add new</button>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid bg-white p-4 mt-2 mb-2">
+      <h6 class="text-right">
+          {{this.articles.paginationText}}</h6>
+    <div class="table-responsive">
+      <table class="table table-sm table-hover ">
+        <thead>
+          <tr role="row">
+            <th scope="col" style="width: 5%;" class="text-center">#</th>
+            <th scope="col" style="width: 2%;" class="text-center"></th>
+            <th scope="col" style="width: 2%;" class="text-center"></th>
+            <th scope="col" style="width: 48%;" class="text-center">Title</th>
+            <th scope="col" style="width: 15%;" class="text-center"></th>
+            <th scope="col" style="width: 18%;" class="text-center">Publish Date</th>
+            <th scope="col" style="width: 10%;" class="text-center"></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let article of (this.articles.items ? this.articles.items : [])">
+            <td class="text-center">
+              {{ article.id }}
+            </td>
+            <td class="text-center" title="Preview Article">
+              <a class="nav-link" [routerLink]='["", "preview", article.id ]'><i class="fas fa-book-open"></i></a>
+            </td>
+            <td class="text-center" title="Article Statistics">
+              <a class="nav-link" [routerLink]='["", "report", article.id ]'>
+                <i class="fas fa-chart-pie"></i></a>
+            </td>
+            <td>
+              <a class="nav-link" [routerLink]='["", "edit", article.id ]'>{{
+                article.title }}</a>
+            </td>
+            <!-- <td class="text-center">
+              {{ article.author }}
+            </td> -->
+            <td class="text-center">
+              <div class="btn-group" role="group" aria-label="Basic example">
+                <button type="button" class="page-link mr-1">
+                  <i class="fas fa-thumbs-up"></i><span class="ml-2">{{this.article.likeCount || 0}}</span>
+                </button>
+                <button type="button" class="page-link">
+                  <i class="fas fa-thumbs-down"></i><span class="ml-2">{{this.article.unLikeCount || 0}}</span>
+                </button>
+              </div>
+            </td>
+            <td>
+              {{ article.publishDate | date:'medium' }}
+            </td>
+            <td class="text-center">
+              <button *ngIf="this.article.isPublished" class="page-link" (click)="onDeleteButtonClick(this.article.id)">
+                <i class="fas fa-trash"></i> Remove
+              </button>
+              <button *ngIf="!this.article.isPublished" class="page-link" (click)="onPublishButtonClick(this.article.id)">
+                <i class="fas fa-check"></i> Publish
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <nav *ngIf="this.articles && this.articles.items.length" aria-label="Page navigation example mt-2">
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <button class="page-link" (click)="onGoToPageButtonClick(1)">
+          <i class="fas fa-fast-backward"></i>
+        </button>
+      </li>
+      <li class="page-item" [ngClass]="{disabled: this.articles && !this.articles.hasPreviousPage}">
+        <button class="page-link" (click)="onPreviousButtonClick(this.articles.pageNumber)">
+          <i class="fas fa-step-backward"></i>
+        </button>
+      </li>
+      <li class="page-item">
+        <button class="page-link">{{this.articles.pageNumber}}</button>
+      </li>
+      <li class="page-item" [ngClass]="{disabled: this.articles && !this.articles.hasNextPage}">
+        <button class="page-link" (click)="onNextButtonClick(this.articles.pageNumber)">
+          <i class="fas fa-step-forward"></i>
+        </button>
+      </li>
+      <li class="page-item">
+        <button class="page-link" (click)="onGoToPageButtonClick(this.articles.totalPages)">
+          <i class="fas fa-fast-forward"></i>
+        </button>
+      </li>
+    </ul>
+  </nav>
+</div>

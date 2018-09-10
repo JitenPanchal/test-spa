@@ -1,0 +1,170 @@
+﻿* {
+    font-family: 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif !important;
+    border-radius: 0px !important;
+}
+
+.header {
+    background-color: #3c8dbc;
+}
+
+.brand-icon {
+    color: white;
+    font-size: 25px !important;
+}
+
+.brand-title {
+    color: white;
+    font-size: 25px !important;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+#sidebar {
+    width: 18%;
+    position: fixed;
+    padding-top: 4%;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    transition: all 0.3s;
+    color: #fff;
+    background: #1e282c;
+    font-weight: 400 !important;
+    font-size: 0.85rem !important;
+}
+
+    #sidebar.active {
+        margin-left: -18%;
+    }
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 18%);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    padding-top: 4%;
+    right: 0;
+}
+
+    #content.active {
+        width: 100%;
+    }
+
+.side-bar-search-box {
+    border-radius: 0mm !important;
+    border: 0px none;
+}
+
+.search-suggestion-box {
+    border-radius: 0mm !important;
+    border: 0px none;
+    position: absolute;
+    z-index: 99;
+    top: 100%;
+    width: 100%;
+}
+
+.search-suggestion-box-item {
+    border-radius: 0px !important;
+}
+
+
+.form-group * {
+    font-weight: 400 !important;
+    font-size: 0.85rem !important;
+}
+
+.table {
+    font-weight: 400 !important;
+    font-size: 0.85rem !important;
+}
+
+.form-group label {
+    font-weight: 700 !important;
+}
+
+#content .btn {
+    background-color: rgb(0, 115, 183) !important;
+}
+
+textarea:focus,
+select:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus {
+    border-color: rgb(0, 115, 183) !important;
+    box-shadow: none !important;
+}
+
+button:focus {
+    box-shadow: none !important;
+}
+
+a.back-link {
+    color: rgb(0, 115, 183) !important;
+    text-decoration: none;
+}
+
+.invalid-label {
+    color: red;
+}
+
+.app-alert {
+    width: 100% !important;
+    margin: auto !important;
+    margin-top: 3px !important;
+}
+
+.app-alert-content {
+    width: 50% !important;
+    margin: auto !important;
+    z-index: 1000002 !important;
+}
+
+
+
+.overlay {
+    position: absolute; /* Sit on top of the page content */
+    /*display: none; /* Hidden by default */
+    width: 100%; /* Full width (cover the whole page) */
+    height: 90%; /* Full height (cover the whole page) */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* border: solid red 1px; */
+    background-color: rgba(0,0,0,0); /* Black background with opacity */
+    z-index: 1000000; /* Specify a stack order in case you're using a different order for other elements */
+    /*cursor: pointer; /* Add a pointer on hover */
+}
+
+.overlay-content {
+    margin: auto;
+    color: #3c8dbc;
+}
+
+
+.navbar {
+    z-index: 1000001;
+}
